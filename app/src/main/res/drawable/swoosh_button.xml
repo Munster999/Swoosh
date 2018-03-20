@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#64000000" />
+    <stroke android:color="@android:color/white"
+            android:width="2dp"/>
+</shape>
+
+<!--
+NOTE: #64000000
+        64 = Opacity or transparency = 40% level of opacity - actual value should be '#66'
+        000000 = Black
+      stroke = 2dp white border
+-->

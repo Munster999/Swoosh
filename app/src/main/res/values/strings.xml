@@ -15,8 +15,11 @@
     <string name="get_started">GET STARTED</string>
     <string name="I_am_a">I am a:</string>
     <string name="finish">Finish</string>
-    <string name="beginner_button">Beginner</string>
-    <string name="baller_button">Baller</string>
     <string name="beginner">Beginner</string>
     <string name="baller">Baller</string>
+    <string name="search_league">Looking for a co-ed beginner league near you…</string>
+    <string name="find_a_team_in_your_city_and_dominate_the_league">Find a team in your city, and dominate the league</string>
+    <string name="Looking_for_a_">Looking for a </string>
+    <string name="_league_near_you..."> league near you…</string>
+    <string name="test_message">Looking for a %1$s %2$s league near you…"</string>
 </resources>

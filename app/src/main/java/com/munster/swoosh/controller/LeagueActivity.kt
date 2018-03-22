@@ -1,9 +1,11 @@
-package com.munster.swoosh
+package com.munster.swoosh.controller
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.munster.swoosh.utilities.EXTRA_LEAGUE
+import com.munster.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -45,11 +47,5 @@ class LeagueActivity : BaseActivity() {
         } else {
             Toast.makeText(this, "Please select a League", Toast.LENGTH_SHORT).show()
         }
-
-
     }
-
-
-
-
 }

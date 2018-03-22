@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.munster.swoosh.LeagueActivity">
+    tools:context="com.munster.swoosh.controller.LeagueActivity">
 
     <ImageView
         android:id="@+id/BWbackgroundImage"
@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/swooshlogo" />
 
     <Button
-        android:id="@+id/finishButton"
+        android:id="@+id/skillFinishBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -41,11 +41,12 @@
         android:layout_marginStart="16dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montserrat"
+
         android:text="@string/finish"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -71,20 +72,21 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/finishButton"
+        app:layout_constraintBottom_toTopOf="@+id/skillFinishBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/BWbackgroundImage"
         app:layout_constraintVertical_bias="0.32">
 
         <ToggleButton
-            android:id="@+id/beginnerToggle"
+            android:id="@+id/beginnerSkillBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+
             android:text="@string/beginner"
             android:textColor="@android:color/white"
             android:textOff="@string/beginner"
@@ -93,13 +95,14 @@
             tools:layout_editor_absoluteY="151dp" />
 
         <ToggleButton
-            android:id="@+id/ballerToggle"
+            android:id="@+id/ballerSkillBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+
             android:text="@string/togglebutton"
             android:textColor="@android:color/white"
             android:textOff="@string/baller"

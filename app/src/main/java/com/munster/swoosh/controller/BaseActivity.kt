@@ -23,14 +23,14 @@ open class BaseActivity : AppCompatActivity() {
         super.onResume()
     }
 
-    override fun onRestart() {
-        Log.d(TAG, "${javaClass.simpleName} [ ON RESTART ]" )
-        super.onRestart()
-    }
-
     override fun onPause() {
         Log.d(TAG, "${javaClass.simpleName} [ ON PAUSE ]" )
         super.onPause()
+    }
+
+    override fun onRestart() {
+        Log.d(TAG, "${javaClass.simpleName} [ ON RESTART ]" )
+        super.onRestart()
     }
 
     override fun onStop() {

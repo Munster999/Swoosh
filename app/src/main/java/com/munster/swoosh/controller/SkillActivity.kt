@@ -4,36 +4,33 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import com.munster.swoosh.R
-import com.munster.swoosh.utilities.EXTRA_SKILL
-import com.munster.swoosh.utilities.EXTRA_LEAGUE
+import com.munster.swoosh.model.Player
+import com.munster.swoosh.utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
 
-    var league = ""
-    var skill = ""
+    lateinit var player : Player // means to initialise a var LATER....
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
-        league = intent.getStringExtra(EXTRA_LEAGUE)
-        println(league)
+        player = intent.getParcelableExtra(EXTRA_PLAYER) // NOTE: (var gets initialised) and we retrieve the parcelable EXTRA value
 
         beginnerSkillBtn.setOnClickListener {
             ballerSkillBtn.isChecked = false
-            skill = "beginner"
+            player.skill = "beginner"
         }
 
         ballerSkillBtn.setOnClickListener {
             beginnerSkillBtn.isChecked = false
-            skill = "baller"
+            player.skill = "baller"
         }
 
         skillFinishBtn.setOnClickListener {
-            if (skill != "") {
+            if (player.skill != "") {
                 val finishActivity = Intent(this, FinishActivity::class.java)
-                finishActivity.putExtra(EXTRA_LEAGUE, league)
-                finishActivity.putExtra(EXTRA_SKILL, skill)
+                finishActivity.putExtra(EXTRA_PLAYER, player) // amended to include parcelable class values
                 startActivity(finishActivity)
             } else {
                 Toast.makeText(this, "Please select a skill level", Toast.LENGTH_SHORT).show()

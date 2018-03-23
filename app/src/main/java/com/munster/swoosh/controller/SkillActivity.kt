@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
 
-    lateinit var player : Player // means to initialise a var LATER....
+    lateinit var player: Player // means to initialise a var LATER....
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +38,20 @@ class SkillActivity : BaseActivity() {
         }
     }
 
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER, player)
+    } // saving changes from instance 1
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null) {
+            player = savedInstanceState.getParcelable(EXTRA_PLAYER)
+        }
+    }// restoring changes into instance 2
+
+}
+
 /*  NOTE: Trying to place the function name in the xml does not work here (reason unknown)
     - Hence had to create some 'ClickListeners' as shown above - these worked )
 
@@ -63,4 +77,4 @@ class SkillActivity : BaseActivity() {
             Toast.makeText(this, "Please select a skill level", Toast.LENGTH_SHORT).show()
         }
     }*/
-}
+

@@ -36,7 +36,7 @@
         android:id="@+id/goallinText"
         android:layout_width="287dp"
         android:layout_height="68dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/go_all_in"
         android:textAlignment="center"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/goallinText" />
 
     <TextView
-        android:id="@+id/findText"
+        android:id="@+id/findaTeamText"
         android:layout_width="215dp"
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
@@ -79,15 +79,15 @@
     <Button
         android:id="@+id/getStartedBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="200dp"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montserrat"
         android:text="@string/get_started"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/bgroundImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findText" />
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

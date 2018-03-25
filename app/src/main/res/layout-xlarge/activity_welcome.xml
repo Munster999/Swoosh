@@ -26,31 +26,29 @@
         android:contentDescription="@string/swoosh_image"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/swooshlogo" />
 
     <TextView
         android:id="@+id/goallinText"
-        android:layout_width="512dp"
+        android:layout_width="397dp"
         android:layout_height="127dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="280dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/go_all_in"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="90sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toStartOf="@+id/vertGuideline75Perc"
+        app:layout_constraintStart_toStartOf="@+id/vertGuideline25Perc"
         app:layout_constraintTop_toBottomOf="@+id/swooshImage" />
 
     <TextView
         android:id="@+id/ongoingText"
         android:layout_width="452dp"
         android:layout_height="55dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/on_going_all_out"
         android:textAlignment="center"
@@ -58,21 +56,22 @@
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goallinText" />
 
     <TextView
-        android:id="@+id/findText"
+        android:id="@+id/findaTeamText"
         android:layout_width="429dp"
         android:layout_height="85dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/find_a_team_in_your_city_and_dominate_the_league"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ongoingText" />
 
@@ -80,15 +79,44 @@
         android:id="@+id/getStartedBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="250dp"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="32dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montserrat"
         android:text="@string/get_started"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findText" />
+        app:layout_constraintBottom_toTopOf="@+id/HoriGuideline_66Perc"
+        app:layout_constraintEnd_toStartOf="@+id/vertGuideline75Perc"
+        app:layout_constraintStart_toStartOf="@+id/vertGuideline25Perc" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/HoriGuideline_33Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/HoriGuideline_66Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertGuideline25Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertGuideline75Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="671dp"
+        app:layout_constraintGuide_percent="0.75"/>
 </android.support.constraint.ConstraintLayout>

@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/goallinText" />
 
     <TextView
-        android:id="@+id/findText"
+        android:id="@+id/findaTeamText"
         android:layout_width="450dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
@@ -87,7 +87,8 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/get_started"
         android:textColor="@android:color/white"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findText" />
+        app:layout_constraintTop_toBottomOf="@+id/findaTeamText" />
 </android.support.constraint.ConstraintLayout>

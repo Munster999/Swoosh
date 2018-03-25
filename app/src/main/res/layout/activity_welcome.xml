@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/goallinText" />
 
     <TextView
-        android:id="@+id/findText"
+        android:id="@+id/findaTeamText"
         android:layout_width="215dp"
         android:layout_height="42dp"
         android:layout_marginTop="32dp"

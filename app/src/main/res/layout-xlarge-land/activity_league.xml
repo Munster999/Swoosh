@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.munster.swoosh.controller.LeagueActivity">
+
+    <ImageView
+        android:id="@+id/bgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/background_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/desiredleaguebg" />
+
+    <ImageView
+        android:id="@+id/swooshImage"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/swoosh_image"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/swooshlogo" />
+
+    <TextView
+        android:id="@+id/desiredTextView"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/desired_league"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swooshImage" />
+
+    <ToggleButton
+        android:id="@+id/mensLeagueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="300dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/swoosh_toggle"
+        android:onClick="onMensClicked"
+        android:text="@string/mens"
+        android:textColor="@android:color/white"
+        android:textOff="@string/mens"
+        android:textOn="@string/mens"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desiredTextView"
+        tools:text="Mens" />
+
+    <ToggleButton
+        android:id="@+id/womensLeagueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="300dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/swoosh_toggle"
+        android:onClick="onWomensClicked"
+        android:text="@string/togglebutton"
+        android:textColor="@android:color/white"
+        android:textOff="@string/womens"
+        android:textOn="@string/womens"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mensLeagueBtn" />
+
+    <ToggleButton
+        android:id="@+id/coedLeagueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="300dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/swoosh_toggle"
+        android:onClick="onCoedClicked"
+        android:text="@string/co_ed"
+        android:textColor="@android:color/white"
+        android:textOff="@string/co_ed"
+        android:textOn="@string/co_ed"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/womensLeagueBtn" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="300dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/swoosh_button"
+        android:fontFamily="@font/montserrat"
+        android:onClick="leagueNextClicked"
+        android:text="@string/next"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horiGuideline_66Perc" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horiGuideline_33Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="809dp"
+        app:layout_constraintGuide_percent="0.333"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horiGuideline_66Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="410dp"
+        app:layout_constraintGuide_percent="0.666"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horiGuideline_82Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="410dp"
+        app:layout_constraintGuide_percent="0.825"/>
+
+</android.support.constraint.ConstraintLayout>
